@@ -11,7 +11,7 @@ public class Destroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.Find("Enemy");   //“Gî•ñ‚ğæ“¾
+        enemy = GameObject.Find("Mato");   //“Gî•ñ‚ğæ“¾
         hp = enemy.GetComponent<HP>();      //HPî•ñ‚ğæ“¾
     }
 
