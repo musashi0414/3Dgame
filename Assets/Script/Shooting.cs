@@ -20,7 +20,6 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-
             shotInterval += 1;
 
             if (shotInterval % 5 == 0 && shotCount > 0)
@@ -39,7 +38,7 @@ public class Shooting : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            shotCount = 30;
+            shotCount = 500;
 
         }
     }
