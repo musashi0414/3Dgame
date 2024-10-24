@@ -25,8 +25,9 @@ namespace FPS
         private float yRotVelocity;
         private float xRotVelocity;
 
-        
-       
+        [SerializeField] GameObject target;
+        private float speed = 3.0f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -37,7 +38,11 @@ namespace FPS
         // Update is called once per frame
         void Update()
         {
-           
+            //ÉvÉåÉCÉÑÅ[ÇÃà⁄ìÆ
+            transform.position = Vector3.MoveTowards(
+         transform.position,
+         target.transform.position,
+         speed * Time.deltaTime);
 
             //UpdateCursorLock();
 
