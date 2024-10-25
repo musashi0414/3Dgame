@@ -38,11 +38,12 @@ namespace FPS
         // Update is called once per frame
         void Update()
         {
-            //プレイヤーの移動
+            //プレイヤーの移動、第一中間地点まで移動
             transform.position = Vector3.MoveTowards(
          transform.position,
          target.transform.position,
          speed * Time.deltaTime);
+
 
             //UpdateCursorLock();
 
@@ -60,7 +61,7 @@ namespace FPS
             transform.rotation = Quaternion.Euler(currentXRot, currentYRot, 0);
         }
 
-       
+      
 
     }
 }
