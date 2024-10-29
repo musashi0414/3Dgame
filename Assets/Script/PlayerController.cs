@@ -25,8 +25,11 @@ namespace FPS
         private float yRotVelocity;
         private float xRotVelocity;
 
+        [SerializeField] private Transform[] point;
+
         [SerializeField] GameObject target;
         private float speed = 3.0f;
+       
 
         // Start is called before the first frame update
         void Start()
@@ -44,6 +47,7 @@ namespace FPS
          target.transform.position,
          speed * Time.deltaTime);
 
+         
 
             //UpdateCursorLock();
 
