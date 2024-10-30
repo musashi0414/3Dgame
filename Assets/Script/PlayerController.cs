@@ -28,7 +28,7 @@ namespace FPS
         [SerializeField] private Transform[] point;
 
         [SerializeField] GameObject target;
-        private float speed = 3.0f;
+        private float speed = 5.0f;
        
 
         // Start is called before the first frame update
@@ -65,7 +65,10 @@ namespace FPS
             transform.rotation = Quaternion.Euler(currentXRot, currentYRot, 0);
         }
 
-      
 
+        private void OnTriggerEnter(Collider other)
+        {
+            transform.position += Vector3.right * 3 * Time.deltaTime;
+        }
     }
 }

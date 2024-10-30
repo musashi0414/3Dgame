@@ -36,12 +36,12 @@ public class Shooting : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             shotCount = 500;
 
         }
     }
 
-   
+    
 }

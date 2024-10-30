@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    public int damage;          //当たった部位毎のダメージ量
-    private GameObject enemy;   //敵オブジェクト
-    private HP hp;              //HPクラス
+    //public int damage;          //当たった部位毎のダメージ量
+    //private GameObject enemy;   //敵オブジェクト
+    //private HP hp;              //HPクラス
 
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.Find("Mato");   //敵情報を取得
-        hp = enemy.GetComponent<HP>();      //HP情報を取得
+        //enemy = GameObject.Find("Mato");   //敵情報を取得
+        //hp = enemy.GetComponent<HP>();      //HP情報を取得
     }
 
     // Update is called once per frame
@@ -21,18 +21,18 @@ public class Destroy : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
-    {
+    //void OnTriggerEnter(Collider other)
+    //{
 
-        //ぶつかったオブジェクトのTagにShellという名前が書いてあったならば（条件）.
-        if (other.CompareTag("gun"))
-        {
+    //    //ぶつかったオブジェクトのTagにShellという名前が書いてあったならば（条件）.
+    //    if (other.CompareTag("gun"))
+    //    {
 
-            //HPクラスのDamage関数を呼び出す
-            hp.Damage(damage);
+    //        //HPクラスのDamage関数を呼び出す
+    //        hp.Damage(damage);
 
-            //ぶつかってきたオブジェクトを破壊する.
-            Destroy(other.gameObject);
-        }
-    }
+    //        //ぶつかってきたオブジェクトを破壊する.
+    //        Destroy(other.gameObject);
+    //    }
+    //}
 }
