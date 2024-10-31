@@ -29,7 +29,9 @@ namespace FPS
 
         [SerializeField] GameObject target;
         private float speed = 5.0f;
+
        
+
 
         // Start is called before the first frame update
         void Start()
@@ -66,9 +68,10 @@ namespace FPS
         }
 
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider collider)
         {
             transform.position += Vector3.right * 3 * Time.deltaTime;
+        
         }
     }
 }
