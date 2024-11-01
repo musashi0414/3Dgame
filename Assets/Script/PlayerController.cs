@@ -27,29 +27,44 @@ namespace FPS
 
         [SerializeField] private Transform[] point;
 
-        [SerializeField] GameObject target;
-        private float speed = 5.0f;
+        //[SerializeField] GameObject target;
+        //private float speed = 5.0f;
 
-       
+        //スタートと終わりの目印
+        public Transform TurningPoint_one;
+        public Transform TurningPoint_two;
+        
+
+        // スピード
+        public float speed = 4.0F;
+
+        //二点間の距離を入れる
+        private float distance_two;
 
 
         // Start is called before the first frame update
         void Start()
         {
-               
-            
+            //二点間の距離を代入(スピード調整に使う)
+            distance_two = Vector3.Distance(TurningPoint_one.position, TurningPoint_two.position);
+
+
+           
         }
 
         // Update is called once per frame
         void Update()
         {
-            //プレイヤーの移動、第一中間地点まで移動
-            transform.position = Vector3.MoveTowards(
-         transform.position,
-         target.transform.position,
-         speed * Time.deltaTime);
-
-         
+            //プレイヤーの移動、第三中間地点まで移動
+            //   transform.position = Vector3.MoveTowards(
+            //transform.position,
+            //target.transform.position,
+            //speed * Time.deltaTime);
+            // 現在の位置
+            float present_Location = (Time.time * speed) / distance_two;
+            // オブジェクトの移動
+            transform.position = Vector3.Lerp(TurningPoint_one.position, TurningPoint_two.position, present_Location);
+            
 
             //UpdateCursorLock();
 
@@ -68,10 +83,14 @@ namespace FPS
         }
 
 
-        private void OnTriggerEnter(Collider collider)
+        private void OnTriggerEnter(Collider other)
         {
-            transform.position += Vector3.right * 3 * Time.deltaTime;
-        
+            //transform.position += Vector3.right * 3 * Time.deltaTime;
+
+           
+
+           
+
         }
     }
 }
