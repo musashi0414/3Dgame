@@ -38,7 +38,7 @@ public class Shooting : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            shotCount = 500;
+            shotCount =3000;
 
         }
     }
