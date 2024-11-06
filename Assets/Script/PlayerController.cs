@@ -87,9 +87,12 @@ namespace FPS
         {
             //transform.position += Vector3.right * 3 * Time.deltaTime;
 
-           
+            if (other.gameObject.tag == "two")
+            {
+                transform.Rotate(new Vector3(0, 90, 0));
+            }
 
-           
+
 
         }
     }
