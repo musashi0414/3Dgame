@@ -99,7 +99,7 @@ namespace FPS
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log(count);
+            //Debug.Log(count);
 
             //transform.position += Vector3.right * 3 * Time.deltaTime;
 
