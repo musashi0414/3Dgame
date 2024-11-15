@@ -1710,6 +1710,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -4209,7 +4210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060949206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.002000004, y: 0.0455, z: 0.158}
+  m_LocalPosition: {x: -0.002000004, y: 0.0372, z: 0.193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4229,8 +4230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6159121657823183373, guid: 22de9b0edcee74b4cbd69de95957335e, type: 3}
-  shotSpeed: 3000
-  shotCount: 3000
+  shotSpeed: 5000
+  shotCount: 500
 --- !u!1 &2081618905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1115811517043465654, guid: 7082fcc424f5931448a4f1e275f3565d, type: 3}

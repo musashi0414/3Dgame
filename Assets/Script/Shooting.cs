@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    
+
     public GameObject bulletPrefab;
     public float shotSpeed;
     public int shotCount = 30;
@@ -18,6 +20,8 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (Input.GetKey(KeyCode.Mouse0))
         {
             shotInterval += 1;
@@ -38,10 +42,10 @@ public class Shooting : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            shotCount =3000;
+            shotCount = 3000;
 
         }
     }
 
-    
+
 }
