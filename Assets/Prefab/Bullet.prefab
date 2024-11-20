@@ -161,6 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cb9837ce0f8b44fa86c19ca9fd32ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClearScene: ClearScene
+  scoreText: {fileID: 0}
 --- !u!1 &6182448751034661787
 GameObject:
   m_ObjectHideFlags: 0

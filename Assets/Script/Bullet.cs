@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
-    //public Text Scoretext;
-    //private int score = 0;
+    public string ClearScene;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //// UI を初期化
+        //score = 0;
+        //SetCountText();
     }
 
     // Update is called once per frame
@@ -24,11 +28,41 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mato")) // 的かどうかのタグをチェック
         {
-            //score += 3;
-            //Scoretext.text = string.Format("スコア：{0}", score);
+
+            //ScoreText.text = string.Format("スコア：{0}", Score);
 
             Destroy(other.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
     }
+
+    // 玉が他のオブジェクトにぶつかった時に呼び出される
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    // ぶつかったオブジェクトが収集アイテムだった場合
+    //    if (other.gameObject.CompareTag("Mato"))
+    //    {
+    //        // その収集アイテムを非表示にします
+    //        other.gameObject.SetActive(false);
+
+    //        // スコアを加算します
+    //        score = score + 1;
+
+    //        // UI の表示を更新します
+    //        SetCountText();
+    //    }
+    //}
+
+    //// UI の表示を更新する
+    //void SetCountText()
+    //{
+    //    // スコアの表示を更新
+    //    scoreText.text = "Count: " + score.ToString();
+
+    //    // すべての収集アイテムを獲得した場合
+    //    if (score >= 100)
+    //    {
+    //        SceneManager.LoadScene(ClearScene);
+    //    }
+    //}
 }
