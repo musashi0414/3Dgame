@@ -13,7 +13,7 @@ public class CubeMoveUp : MonoBehaviour
     {
         startPos = transform.position;
 
-        ScoreCount = GameObject.Find("ScoreCount"); // ç°âÒí«â¡â”èä 
+        //ScoreCount = GameObject.Find("ScoreCount"); // ç°âÒí«â¡â”èä 
     }
 
     // Update is called once per frame
@@ -23,13 +23,13 @@ public class CubeMoveUp : MonoBehaviour
         transform.position = new Vector3(transform.position.x, posY, transform.position.z);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "gun")
-        {
-            Debug.Log("BulletCollision");
-            ScoreCount.GetComponent<ScoreManager>().score = ScoreCount.GetComponent<ScoreManager>().score + 3; // ç°âÒí«â¡â”èä
-            Destroy(this.gameObject);
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "gun")
+    //    {
+    //        Debug.Log("BulletCollision");
+    //        ScoreCount.GetComponent<ScoreManager>().score = ScoreCount.GetComponent<ScoreManager>().score + 3; // ç°âÒí«â¡â”èä
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 }
