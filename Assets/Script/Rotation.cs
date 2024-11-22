@@ -19,22 +19,36 @@ public class Rotation : MonoBehaviour
     {
         Initialize();
 
-        // UI を初期化
-        //score = 0;
-        SetCountText();
+        //// UI を初期化
+        ////score = 0;
+        //SetCountText();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // スコアを加算します
-        score = score + 3;
-        //score += 3;
-        //ScoreText.text = string.Format("スコア:{0}", score);
-        
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Blue"))
+    //    {
+    //        // スコアを加算します
+    //        score = score + 3;
+    //    }
+    //    else if (other.gameObject.CompareTag("Yellow"))
+    //    {
+    //        // スコアを加算します
+    //        score = score + 5;
+    //    }
+    //    else if (other.gameObject.CompareTag("Red"))
+    //    {
+    //        // スコアを加算します
+    //        score = score + 10;
+    //    }
 
-        // UI の表示を更新します
-        SetCountText();
-    }
+    //    //score += 3;
+    //    //ScoreText.text = string.Format("スコア:{0}", score);
+
+
+    //    //// UI の表示を更新します
+    //    //SetCountText();
+    //}
 
     // Update is called once per frame
     void Update()
@@ -45,9 +59,9 @@ public class Rotation : MonoBehaviour
             highScore = score;
         }
 
-        // スコア・ハイスコアを表示する
-        scoreText.text = score.ToString();
-        highScoreText.text = highScore.ToString();
+        //// スコア・ハイスコアを表示する
+        //scoreText.text = score.ToString();
+        //highScoreText.text = highScore.ToString();
 
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
     }
@@ -80,11 +94,11 @@ public class Rotation : MonoBehaviour
     }
 
     // UI の表示を更新する
-    void SetCountText()
-    {
-        // スコアの表示を更新
-        ScoreText.text = "Count: " + score.ToString();
+    //void SetCountText()
+    //{
+    //    // スコアの表示を更新
+    //    ScoreText.text = "Count: " + score.ToString();
 
         
-    }
+    //}
 }

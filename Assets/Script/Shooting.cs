@@ -11,6 +11,9 @@ public class Shooting : MonoBehaviour
     public int shotCount = 30;
     private float shotInterval;
 
+    private float timeBetweenShot = 0.05f;
+    private float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,31 +23,23 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // タイマーの時間を動かす
+        timer += Time.deltaTime;
 
-
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && timer > timeBetweenShot)
         {
-            shotInterval += 1;
+            // タイマーの時間を０に戻す。
+            timer = 0.0f;
 
-            if (shotInterval % 5 == 0 && shotCount > 0)
-            {
-                shotCount -= 1;
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+            bulletRb.AddForce(transform.forward * shotSpeed);
 
-                GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.Euler(transform.parent.eulerAngles.x, transform.parent.eulerAngles.y, 0));
-                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-                bulletRb.AddForce(transform.forward * shotSpeed);
-
-                //射撃されてから3秒後に銃弾のオブジェクトを破壊する.
-
-                Destroy(bullet, 3.0f);
-            }
+            //射撃されてから3秒後に銃弾のオブジェクトを破壊する.
+            Destroy(bullet, 3.0f);
 
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            shotCount = 3000;
-
-        }
+       
     }
 
 

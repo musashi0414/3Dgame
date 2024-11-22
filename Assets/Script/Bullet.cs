@@ -7,12 +7,23 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public string ClearScene;
+    public Text scoreText; // スコアの UI
+    public Text winText; // リザルトの UI
 
-    
+    private Rigidbody rb; // Rididbody
+    private int score; // スコア
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // Rigidbody を取得
+        rb = GetComponent<Rigidbody>();
+
+        // UI を初期化
+        score = 0;
+        SetCountText();
+        winText.text = "";
         //// UI を初期化
         //score = 0;
         //SetCountText();
@@ -33,6 +44,25 @@ public class Bullet : MonoBehaviour
 
             Destroy(other.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
+
+            // スコアを加算します
+            score = score + 3;
+
+            // UI の表示を更新します
+            SetCountText();
+        }
+    }
+
+    // UI の表示を更新する
+    void SetCountText()
+    {
+        // スコアの表示を更新
+        scoreText.text = "Count: " + score.ToString();
+
+        // すべての収集アイテムを獲得した場合
+        if (score >= 100)
+        {
+            SceneManager.LoadScene(ClearScene);
         }
     }
 
@@ -53,16 +83,5 @@ public class Bullet : MonoBehaviour
     //    }
     //}
 
-    //// UI の表示を更新する
-    //void SetCountText()
-    //{
-    //    // スコアの表示を更新
-    //    scoreText.text = "Count: " + score.ToString();
 
-    //    // すべての収集アイテムを獲得した場合
-    //    if (score >= 100)
-    //    {
-    //        SceneManager.LoadScene(ClearScene);
-    //    }
-    //}
 }
