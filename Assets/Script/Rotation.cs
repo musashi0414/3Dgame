@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    public Text ScoreText; // スコアの UI
-    public Text highScoreText;// ハイスコアを表示する
-    private static int score; // スコア
-    private int highScore;// ハイスコア
+    //public Text ScoreText; // スコアの UI
+    //public Text highScoreText;// ハイスコアを表示する
+    //private static int score; // スコア
+    //private int highScore;// ハイスコア
 
     //public int value = 0;
    
@@ -37,8 +37,8 @@ public class Rotation : MonoBehaviour
         //    score = score + 10;
         //}
 
-        score += 3;
-        ScoreText.text = string.Format("スコア:{0}", score);
+        //score += 3;
+        //ScoreText.text = string.Format("スコア:{0}", score);
 
 
     }

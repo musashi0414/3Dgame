@@ -26,21 +26,27 @@ namespace FPS
         private float yRotVelocity;
         private float xRotVelocity;
 
-        private float speed = 8.0f;
+        private float speed = 8.0f;//プレイヤーの移動速度
         private int count = 1;
+
+       
+
+        //public static string gameState = "playing";//ゲームの状態
 
         [SerializeField] Transform TurningPoint_one;
         [SerializeField] Transform TurningPoint_two;
         [SerializeField] Transform TurningPoint_three;
 
-       
+        //internal int score;
+
+
 
 
         // Start is called before the first frame update
         void Start()
         {
 
-           
+           // gameState = "playing";//ゲーム中にする
         }
 
         // Update is called once per frame

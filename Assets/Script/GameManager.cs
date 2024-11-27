@@ -5,45 +5,47 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //スコア追加
-    public GameObject scoreText;    //スコアテキスト
-    public static int totalscore;   //合計スコア
-    public int stageScore = 0;      //ステージスコア
+    [SerializeField] Text scoreText;
+    [SerializeField] GameObject Mato;
+
+    private int score;
+    //private float time;
+    //private int vecX;
+
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        //スコア追加
-        UpdateScore();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerController.gameState == "gameclear")
-        {
-            //スコア追加
-            totalscore += stageScore;
-            stageScore = 0;
-            UpdateScore();//スコア更新
-        }
-        else if (PlayerController.gameState == "playing")
-        {
-            //スコア追加
-            if (playCnt.score != 0)
-            {
-                stageScore += playCnt.score;
-                playCnt.score = 0;
-                UpdateScore();
-            }
-
-        }
+       
     }
 
-    //スコア追加
-    void UpdateScore()
+    public void AddScore()
     {
-        int score = stageScore + totalscore;
-        scoreText.GetComponent<scoreText>().text = score.ToString();
+
+       
+        if (gameObject.tag == "Blue") // 青色かどうかのタグをチェック
+        {
+            score += 3;
+            scoreText.text = "SCORE: " + score.ToString();
+        }
+        else if (gameObject.tag == "Red") // 赤色かどうかのタグをチェック
+        {
+            score += 5;
+            scoreText.text = "SCORE: " + score.ToString();
+        }
+        else if (gameObject.tag == "Yellow") //黄色かどうかのタグをチェック
+        {
+            score += 10;
+            scoreText.text = "SCORE: " + score.ToString();
+        }
     }
+
+    
 }

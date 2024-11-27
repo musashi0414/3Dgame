@@ -6,16 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
-    public string ClearScene;
-    public Text scoreText; // スコアの UI
-    public Text winText; // リザルトの UI
+    //public string ClearScene;
+    //public Text scoreText; // スコアの UI
+    //public Text winText; // リザルトの UI
 
-    private int score = 0;
+    private GameObject gameObj; //GameObjectを入れる変数
+
+    //public static int score = 0;   //スコア
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        gameObj = GameObject.Find("GameObject");//GameObjectを取得
     }
 
     // Update is called once per frame
@@ -26,26 +28,24 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag=="Blue") // 的かどうかのタグをチェック
+        if (collision.gameObject.tag=="Blue") // 青色かどうかのタグをチェック
         {
-            //スコアアイテム
-            ItemData item = collision.gameobject.GetComponent<ItemData>();
-            //スコアを得る
-            score = item.vallue;
-
+            gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
             Destroy(collision.gameObject); // 敵オブジェクトを破壊
-            Destroy(gameObject); // 弾も消す  
+            Destroy(gameObject); // 弾も消す
         }
-        //else if (other.gameObject.CompareTag("Red")) // 的かどうかのタグをチェック
-        //{
-        //    Destroy(other.gameObject); // 敵オブジェクトを破壊
-        //    Destroy(gameObject); // 弾も消す
-        //}
-        //else if (other.gameObject.CompareTag("Yellow")) // 的かどうかのタグをチェック
-        //{
-        //    Destroy(other.gameObject); // 敵オブジェクトを破壊
-        //    Destroy(gameObject); // 弾も消す
-        //}
+        else if (collision.gameObject.tag == "Red") // 青色かどうかのタグをチェック
+        {
+            gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
+            Destroy(collision.gameObject); // 敵オブジェクトを破壊
+            Destroy(gameObject); // 弾も消す
+        }
+        else if (collision.gameObject.tag == "Yellow") // 青色かどうかのタグをチェック
+        {
+            gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
+            Destroy(collision.gameObject); // 敵オブジェクトを破壊
+            Destroy(gameObject); // 弾も消す
+        }
     }
 
    
