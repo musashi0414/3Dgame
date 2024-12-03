@@ -30,18 +30,24 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag=="Blue") // 青色かどうかのタグをチェック
         {
+            
+
             gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
             Destroy(collision.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
         else if (collision.gameObject.tag == "Red") // 青色かどうかのタグをチェック
         {
+            
+
             gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
             Destroy(collision.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
         else if (collision.gameObject.tag == "Yellow") // 青色かどうかのタグをチェック
         {
+            
+
             gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
             Destroy(collision.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す

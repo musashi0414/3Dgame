@@ -28,13 +28,13 @@ public class GameManager : MonoBehaviour
 
     public void AddScore()
     {
+        score += 3;
+        scoreText.text = "SCORE: " + score.ToString();
 
-       
-        if (gameObject.tag == "Blue") // 青色かどうかのタグをチェック
-        {
-            score += 3;
-            scoreText.text = "SCORE: " + score.ToString();
-        }
+        //if (gameObject.tag == "Blue") // 青色かどうかのタグをチェック
+        //{
+           
+        //}
         else if (gameObject.tag == "Red") // 赤色かどうかのタグをチェック
         {
             score += 5;

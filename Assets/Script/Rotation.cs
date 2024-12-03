@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    //public Text ScoreText; // スコアの UI
+    public Text ScoreText; // スコアの UI
     //public Text highScoreText;// ハイスコアを表示する
-    //private static int score; // スコア
+    private int score = 0; // スコア
     //private int highScore;// ハイスコア
 
     //public int value = 0;
@@ -37,16 +37,16 @@ public class Rotation : MonoBehaviour
         //    score = score + 10;
         //}
 
-        //score += 3;
-        //ScoreText.text = string.Format("スコア:{0}", score);
+        score += 3;
+        ScoreText.text = string.Format("スコア:{0}", score);
 
-
+        GetComponent<AudioSource>().Play();  // 効果音を鳴らす
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        
 
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
     }

@@ -31,6 +31,8 @@ public class Shooting : MonoBehaviour
             // タイマーの時間を０に戻す。
             timer = 0.0f;
 
+            GetComponent<AudioSource>().Play();  // 効果音を鳴らす
+
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             bulletRb.AddForce(transform.forward * shotSpeed);
