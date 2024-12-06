@@ -31,7 +31,7 @@ namespace FPS
 
        
 
-        //public static string gameState = "playing";//ƒQ[ƒ€‚Ìó‘Ô
+        
 
         [SerializeField] Transform TurningPoint_one;
         [SerializeField] Transform TurningPoint_two;
@@ -46,7 +46,7 @@ namespace FPS
         void Start()
         {
 
-           // gameState = "playing";//ƒQ[ƒ€’†‚É‚·‚é
+           
         }
 
         // Update is called once per frame
