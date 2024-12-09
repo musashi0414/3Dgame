@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Rotation : MonoBehaviour
 {
-    public Text ScoreText; // スコアの UI
-    //public Text highScoreText;// ハイスコアを表示する
-    private int score = 0; // スコア
+    //public Text ScoreText; // スコアの UI
+    ////public Text highScoreText;// ハイスコアを表示する
+    //private int score = 0; // スコア
     //private int highScore;// ハイスコア
 
     //public int value = 0;

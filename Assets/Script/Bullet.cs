@@ -49,10 +49,10 @@ public class Bullet : MonoBehaviour
 
 
             //gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
-
+            Destroy(collision.gameObject); // 敵オブジェクトを破壊
+            Destroy(gameObject); // 弾も消す
         }
-        //Destroy(collision.gameObject); // 敵オブジェクトを破壊
-        //Destroy(gameObject); // 弾も消す
+
     }
 
 
