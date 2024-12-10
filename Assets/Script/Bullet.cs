@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public string ClearScene;
-    public Text scoreText; // スコアの UI
-    public Text winText; // リザルトの UI
+    //public Text scoreText; // スコアの UI
+    //public Text winText; // リザルトの UI
 
     private GameObject gameObj; //GameObjectを入れる変数
 
@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
         {
 
 
-            //gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
+            gameObj.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
             Destroy(collision.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }

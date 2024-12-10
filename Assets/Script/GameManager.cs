@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Text scoreText;
-    [SerializeField] GameObject Mato;
+    [SerializeField] TextMeshProUGUI scoreText;
+    
 
     private int score;
     //private float time;
@@ -26,26 +27,26 @@ public class GameManager : MonoBehaviour
        
     }
 
-    //public void AddScore()
-    //{
-    //    score += 3;
-    //    scoreText.text = "SCORE: " + score.ToString();
+    public void AddScore()
+    {
 
-    //    //if (gameObject.tag == "Blue") // 青色かどうかのタグをチェック
-    //    //{
-           
-    //    //}
-    //    else if (gameObject.tag == "Red") // 赤色かどうかのタグをチェック
-    //    {
-    //        score += 5;
-    //        scoreText.text = "SCORE: " + score.ToString();
-    //    }
-    //    else if (gameObject.tag == "Yellow") //黄色かどうかのタグをチェック
-    //    {
-    //        score += 10;
-    //        scoreText.text = "SCORE: " + score.ToString();
-    //    }
-    //}
 
-    
+        if (gameObject.tag == "Blue") // 青色かどうかのタグをチェック
+        {
+            score += 3;
+            scoreText.text = "SCORE: " + score.ToString();
+        }
+        //else if (gameObject.tag == "Red") // 赤色かどうかのタグをチェック
+        //{
+        //    score += 5;
+        //    scoreText.text = "SCORE: " + score.ToString();
+        //}
+        //else if (gameObject.tag == "Yellow") //黄色かどうかのタグをチェック
+        //{
+        //    score += 10;
+        //    scoreText.text = "SCORE: " + score.ToString();
+        //}
+    }
+
+
 }

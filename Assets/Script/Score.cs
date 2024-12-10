@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public Text Scoretext;
-    private int score = 0;
+    //public Text Scoretext;
+    //private int score = 0;
 
-    void OnCollisionEnter(Collision collision)
-    {
-        score += 3;
-        Scoretext.text = string.Format("スコア：{0}", score);
-    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    score += 3;
+    //    Scoretext.text = string.Format("スコア：{0}", score);
+    //}
 
     // Start is called before the first frame update
     void Start()
