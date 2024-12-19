@@ -52,10 +52,10 @@ public class Rotation : MonoBehaviour
     }
 
     // ゲーム開始前の状態に戻す
-    private void Initialize()
-    {
+    //private void Initialize()
+    //{
 
-    }
+    //}
 
 
 }

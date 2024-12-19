@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public string ClearScene;
+
+    private int score;
     //public Text scoreText; // スコアの UI
     //public Text winText; // リザルトの UI
 
@@ -30,30 +32,30 @@ public class Bullet : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider other)
     {
-        if (collider.gameObject.tag == "Blue") // 青色かどうかのタグをチェック
+        if (other.gameObject.tag == "Blue") // 青色かどうかのタグをチェック
         {
 
-
-            gameObj_blue.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
-            Destroy(collider.gameObject); // 敵オブジェクトを破壊
+            Debug.Log(score);
+            gameObj_blue.GetComponent<Score_Blue>().AddScore();//AddScore()を実行して加点
+            Destroy(other.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
-        else if (collider.gameObject.tag == "Red") // 青色かどうかのタグをチェック
+        else if (other.gameObject.tag == "Yellow") // 黄色かどうかのタグをチェック
         {
 
 
-            gameObj_yellow.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
-            Destroy(collider.gameObject); // 敵オブジェクトを破壊
+            gameObj_yellow.GetComponent<Score_Yellow>().AddScore();//AddScore()を実行して加点
+            Destroy(other.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
-        else if (collider.gameObject.tag == "Yellow") // 青色かどうかのタグをチェック
+        else if (other.gameObject.tag == "Red") // 赤色かどうかのタグをチェック
         {
 
 
-            gameObj_red.GetComponent<GameManager>().AddScore();//AddScore()を実行して加点
-            Destroy(collider.gameObject); // 敵オブジェクトを破壊
+            gameObj_red.GetComponent<Score_Red>().AddScore();//AddScore()を実行して加点
+            Destroy(other.gameObject); // 敵オブジェクトを破壊
             Destroy(gameObject); // 弾も消す
         }
 
