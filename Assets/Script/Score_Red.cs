@@ -8,12 +8,12 @@ public class Score_Red : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText_red;
 
-    private int score_red;      //赤スコア
+    public static int score_red;      //赤スコア
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        score_red = 0; //スタートでスコアをリセット
     }
 
     // Update is called once per frame

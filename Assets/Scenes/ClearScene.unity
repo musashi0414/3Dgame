@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 398642113}
   - component: {fileID: 398642115}
   - component: {fileID: 398642114}
+  - component: {fileID: 398642116}
   m_Layer: 5
   m_Name: Text_Yellow
   m_TagString: Untagged
@@ -196,8 +197,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278254079
+  m_fontColor: {r: 1, g: 0.9752088, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -264,6 +265,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398642112}
   m_CullTransparentMesh: 1
+--- !u!114 &398642116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398642112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6763c32c7dd51894589d5517381a39ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &457994117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6881937356763571096, guid: f9054546756148f489c2991a626a9be4, type: 3}
@@ -374,6 +387,7 @@ GameObject:
   - component: {fileID: 553566260}
   - component: {fileID: 553566262}
   - component: {fileID: 553566261}
+  - component: {fileID: 553566263}
   m_Layer: 5
   m_Name: Text_Red
   m_TagString: Untagged
@@ -431,8 +445,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -499,6 +513,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553566259}
   m_CullTransparentMesh: 1
+--- !u!114 &553566263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553566259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356ef5a14090354c86403366ec60e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640798442
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +743,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1591,7 +1616,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1800648387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92797cc50cdaa8549b835915e79f519d, type: 3}
+  m_Script: {fileID: 11500000, guid: a54681e519d50e34baa41be69c8520e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1893587062
