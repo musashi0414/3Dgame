@@ -10,7 +10,7 @@ public class TotalScore_Blue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText_blue = GetComponent<TextMeshProUGUI>();       // TextMeshProコンポーネントを取得
+        scoreText_blue = GetComponent<TextMeshProUGUI>();       // TextMeshProコンポーネントを取得       
     }
 
     // Update is called once per frame
