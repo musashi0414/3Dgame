@@ -18,7 +18,7 @@ public class RankRed : MonoBehaviour
     {
         if (Score_Red.score_red == 0)
         {
-            rankRed.text = "Rank:B  Nice!";
+            rankRed.text = "Rank:B  Nice  Try!";
         }
 
         if (Score_Red.score_red >= 10)
