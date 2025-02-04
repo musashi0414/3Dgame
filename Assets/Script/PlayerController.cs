@@ -27,9 +27,9 @@ namespace FPS
         {
            
             if (count == 1)
-                transform.position = Vector3.MoveTowards(transform.position, TurningPoint_two.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, TurningPoint_one.position, speed * Time.deltaTime);
             else if (count == 2)
-                transform.position = Vector3.MoveTowards(transform.position, TurningPoint_three.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, TurningPoint_two.position, speed * Time.deltaTime);
 
         }
 
@@ -39,12 +39,12 @@ namespace FPS
             //Debug.Log(count);
 
            
-            if (other.gameObject.name == "TurningPoint_two")            //第一中間地点まで
+            if (other.gameObject.name == "TurningPoint_one")            //第一中間地点まで
             {
                 count = 2;
 
             }
-            else if (other.gameObject.name == "TurningPoint_three")     //第二中間地点まで
+            else if (other.gameObject.name == "TurningPoint_two")     //第二中間地点まで
             {
                 SceneManager.LoadScene("ClearScene");
             }

@@ -16,7 +16,7 @@ public class CubeMoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float posY = startPos.y + Mathf.Sin(Time.time) * 8;
+        float posY = startPos.y + Mathf.Sin(Time.time) * 2;
         transform.position = new Vector3(transform.position.x, posY, transform.position.z);
     }
 
