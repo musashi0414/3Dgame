@@ -8,7 +8,7 @@ namespace FPS
     public class PlayerController : MonoBehaviour
     {
        
-        private float speed = 8.0f;//プレイヤーの移動速度
+        public float speed = 8.0f;//プレイヤーの移動速度
         private int count = 1;
 
         [SerializeField] Transform TurningPoint_one;
@@ -30,7 +30,8 @@ namespace FPS
                 transform.position = Vector3.MoveTowards(transform.position, TurningPoint_one.position, speed * Time.deltaTime);
             else if (count == 2)
                 transform.position = Vector3.MoveTowards(transform.position, TurningPoint_two.position, speed * Time.deltaTime);
-
+            else if (count == 3)
+                transform.position = Vector3.MoveTowards(transform.position, TurningPoint_three.position, speed * Time.deltaTime);
         }
 
 
@@ -45,6 +46,10 @@ namespace FPS
 
             }
             else if (other.gameObject.name == "TurningPoint_two")     //第二中間地点まで
+            {
+                count = 3;
+            }
+            else if (other.gameObject.name == "TurningPoint_three")     //第二中間地点まで
             {
                 SceneManager.LoadScene("ClearScene");
             }

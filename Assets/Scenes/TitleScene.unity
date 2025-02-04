@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32644942, g: 0.26384902, b: 0.3756858, a: 1}
+  m_IndirectSpecularColor: {r: 0.32642785, g: 0.26385182, b: 0.37563592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -519,6 +519,7 @@ MonoBehaviour:
   TitleScene: 
   StageSelect: StageSelect
   OperationScene: 
+  Stage2: 
 --- !u!1 &882772212
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,8 +746,9 @@ GameObject:
   - component: {fileID: 951837268}
   - component: {fileID: 951837267}
   - component: {fileID: 951837266}
+  - component: {fileID: 951837269}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: no
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,9 +819,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 882772218}
-        m_TargetAssemblyTypeName: NoButton, Assembly-CSharp
-        m_MethodName: confirmation
+      - m_Target: {fileID: 951837269}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -867,6 +869,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951837264}
   m_CullTransparentMesh: 1
+--- !u!114 &951837269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951837264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719278baca7a8844f871da82a07118c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainScene: 
+  ClearScene: 
+  TitleScene: TitleScene
+  StageSelect: 
+  OperationScene: 
+  Stage2: 
 --- !u!1 &1036885314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1142,7 @@ GameObject:
   - component: {fileID: 1487287346}
   - component: {fileID: 1487287345}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: yes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,7 +1380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -763, y: -448}
+  m_AnchoredPosition: {x: -700, y: -400}
   m_SizeDelta: {x: 303.747, y: 89.173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633375383
@@ -1848,3 +1868,4 @@ MonoBehaviour:
   TitleScene: 
   StageSelect: 
   OperationScene: OperationScene
+  Stage2: 

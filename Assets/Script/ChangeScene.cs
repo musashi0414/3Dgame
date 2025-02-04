@@ -10,6 +10,7 @@ public class ChangeScene : MonoBehaviour
     public string TitleScene;
     public string StageSelect;
     public string OperationScene;
+    public string Stage2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +31,6 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(TitleScene);
         SceneManager.LoadScene(StageSelect);
         SceneManager.LoadScene(OperationScene);
+        SceneManager.LoadScene(Stage2);
     }
 }
