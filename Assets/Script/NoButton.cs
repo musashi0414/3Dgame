@@ -9,14 +9,14 @@ public class NoButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //確認パネルを非表示
-        confirmationPanel.SetActive(true);
+        ////確認パネルを非表示
+        //confirmationPanel.SetActive(true);
     }
 
     public void confirmation()
     {
-        //確認パネルを非表示
-        confirmationPanel.SetActive(false);
+        ////確認パネルを非表示
+        //confirmationPanel.SetActive(false);
     }
 
     // Update is called once per frame

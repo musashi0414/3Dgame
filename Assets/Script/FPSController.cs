@@ -5,12 +5,12 @@ using UnityEngine;
 public class FPSController : MonoBehaviour
 {
    
-    [Range(0.1f, 10f)]
+    [Range(0.1f, 0.0f)]
     //カメラ感度、数値が大きいほどより直感的な操作が可能.
-    public float lookSensitivity = 2f;
-    [Range(0.1f, 1f)]
+    public float lookSensitivity = 0.0f;
+    [Range(0.0f, 0.0f)]
     //数値が大きいほどカメラが向きたい方向に向くまでの時間が長くなる.
-    public float lookSmooth = 0.1f;
+    public float lookSmooth = 0.0f;
 
     public Vector2 MinMaxAngle = new Vector2(-65, 65);
 

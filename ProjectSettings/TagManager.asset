@@ -13,6 +13,7 @@ TagManager:
   - Red
   - Yellow
   - ScoreItem
+  - stage1
   layers:
   - Default
   - TransparentFX
